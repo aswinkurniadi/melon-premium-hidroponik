@@ -5,6 +5,9 @@ body {
   color: #333;
   line-height: 1.6;
 }
+
+
+
 header {
   background: url('./assets/img/melon-2.jpg') center/cover no-repeat;
   height: 100vh;
@@ -15,20 +18,83 @@ header {
   text-align: center;
   color: white;
   padding: 20px;
+  position: relative;
 }
-header h1 {
-  font-size: 3rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px 20px;
-  border-radius: 10px;
+
+/* Brand Logo */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba( 0, 0, 0, 0.7); /* putih transparan */
+  padding: 5px 8px;
+  border-radius: 20px; /* sudut melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* bayangan lembut */
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
 }
-header p {
+
+
+.brand img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.brand span {
   font-size: 1.2rem;
-  margin-top: 10px;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 10px 15px;
+  font-weight: bold;
+}
+
+.logo-img {
+  width: 60px; /* atur sesuai kebutuhan */
+  height: 60px;
+  border-radius: 50%; /* bikin melingkar */
+  border: 2px solid rgba(255, 255, 255, 0.5); /* outline transparan */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* bayangan lembut */
+  background-color: white; /* latar belakang putih biar jelas */
+/*  padding: 5px;*/
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animated-text {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(
+    270deg,
+    #ffcf00,
+    #00ff94,
+    #00c2ff,
+    #ff00c8,
+    #ffcf00
+  );
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientText 10s ease infinite;
+/*  padding: 10px 20px;*/
   border-radius: 10px;
 }
+
+@keyframes gradientText {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+
+
+
 .cta {
   margin-top: 20px;
 }
